@@ -1,5 +1,3 @@
-// lighting.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
 
 //Lighting_Editor
 //This is a code to recive input from autohotkey
@@ -7,21 +5,38 @@
 #include <iostream>
 #include <string>
 using namespace std;
+string colour;
 void choices(int a){
 
-	if (a == 1) { cout << "thats a one"; }
-	else {
-		cout << "thats not";
+	if (a == 1) {
+		//purple blue
+		colour = "purple/blue";
+	}
+	else if (a == 2) {
+		//green blue
+		colour = "purple/blue";
+	}
+	else if (a == 3) {
+		//red purple
+		colour = "purple/blue";
+	}
+	else if (a == 4) {
+		//white
+		colour = "purple/blue";
+	}
+	else if (a == 5) {
+		//rainbow wave
+		colour = "purple/blue";
 	}
 }
 int main( int argc, char* argv[]) {
-	string temp = argv[2];
-	string te = argv[1];
+	string arg1 = argv[1];
+	string arg2 = argv[2];
 	ofstream myfile;
+    choices(stoi(arg2));
 	myfile.open("C:/Users/camer/Desktop/test.txt");
-	myfile << "Write variable to file: " + te + " " + temp;
+	myfile << "Write variable to file: " + arg1 + " " + arg2+"\n"+colour;
 	myfile.close();
-	
-    choices(stoi(temp));
+	cout << colour;
     return 0;
 }
