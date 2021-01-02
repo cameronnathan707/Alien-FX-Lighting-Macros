@@ -30,12 +30,11 @@ void choices(int a){
 	}
 }
 int main( int argc, char* argv[]) {
-	string arg1 = argv[1];
-	string arg2 = argv[2];
+	string colourSelection = argv[2];
 	ofstream myfile;
-    choices(stoi(arg2));
+    choices(stoi(colourSelection));
 	myfile.open("C:/Users/camer/Desktop/test.txt");
-	myfile << "Write variable to file: " + arg1 + " " + arg2+"\n"+colour;
+	myfile << "Write colour to file: " + colourSelection+"\n"+colour;
 	myfile.close();
 	cout << colour;
     return 0;
