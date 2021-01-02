@@ -14,19 +14,19 @@ void choices(int a){
 	}
 	else if (a == 2) {
 		//green blue
-		colour = "purple/blue";
+		colour = "green/blue";
 	}
-	else if (a == 3) {
+	else if (a == 3) {   
 		//red purple
-		colour = "purple/blue";
+		colour = "red/purple";
 	}
 	else if (a == 4) {
 		//white
-		colour = "purple/blue";
+		colour = "white";
 	}
 	else if (a == 5) {
 		//rainbow wave
-		colour = "purple/blue";
+		colour = "rainbow wave";
 	}
 }
 int main( int argc, char* argv[]) {
