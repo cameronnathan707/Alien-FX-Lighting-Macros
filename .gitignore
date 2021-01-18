@@ -34,3 +34,4 @@
 # visual studios 
 .vs/
 Debug/
+.vscode/settings.json
