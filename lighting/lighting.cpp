@@ -17,7 +17,7 @@ string colour;
 int main(int argc, char *argv[])
 {
 #define LFX_PURPLE 0x00ff00ff
-#define LFX_LIGHT_GREEN 0x004BFF00
+#define LFX_LIGHT_GREEN 0x0071DE02
 #define LFX_WHITE 0x00CAF1FF
 #define LFX_ALL_LIGHTBAR 0x07FC0000
 #define LFX_ALL_KEYBOARD 0x000001FF
@@ -74,7 +74,7 @@ int main(int argc, char *argv[])
 			case 1:
 				//purple blue
 				colour = "purple/blue";
-					lightFunction(LFX_ALL_KEYBOARD, LFX_PURPLE | LFX_FULL_BRIGHTNESS);
+					lightFunction(LFX_ALL, LFX_PURPLE | LFX_FULL_BRIGHTNESS);
 					updateFunction();
 					Sleep(100);
 							
