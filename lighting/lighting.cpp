@@ -16,14 +16,14 @@ string colour;
 
 int main(int argc, char *argv[])
 {
-	#define LFX_PURPLE {255, 0, 255, 255};
-	#define LFX_BLUE {59,0,255,255};
-	#define LFX_TEAL {0,255,212,255};
-	#define LFX_RED {255,0,0,255}
-	#define LFX_LIGHT_GREEN {0,255,24,255};
-	#define LFX_WHITE {233,244,248,255};
+#define LFX_PURPLE {255, 0, 255, 255};
+#define LFX_BLUE {59, 0, 255, 255};
+#define LFX_TEAL {0, 255, 212, 255};
+#define LFX_RED {255, 0, 0, 255};
+#define LFX_LIGHT_GREEN {0, 255, 24, 255};
+#define LFX_WHITE {233, 244, 248, 255};
 
-	string colourSelection = argv[2];
+	const string colourSelection = argv[2];
 	LFX2INITIALIZE initFunction;
 	LFX2RELEASE releaseFunction;
 
@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
 	LFX2UPDATE updateFunction;
 	LFX2LIGHT lightFunction;
 	LFX2GETVERSION versionFunction;
-		
+
 	HINSTANCE hLibrary = LoadLibrary(_T(LFX_DLL_NAME));
 	if (hLibrary)
 	{
@@ -54,8 +54,8 @@ int main(int argc, char *argv[])
 
 		getLightLocationFunction = (LFX2GETLIGHTLOC)GetProcAddress(hLibrary, LFX_DLL_GETLIGHTLOC);
 		setLightColor = (LFX2SETLIGHTCOL)GetProcAddress(hLibrary, LFX_DLL_SETLIGHTCOL);
-		setLightActionColor =(LFX2SETLIGHTACTIONCOLOR)GetProcAddress(hLibrary,LFX_DLL_SETLIGHTACTIONCOLOR);
-		setTiming=(LFX2SETTIMING)GetProcAddress(hLibrary,LFX_DLL_SETTIMING);
+		setLightActionColor = (LFX2SETLIGHTACTIONCOLOR)GetProcAddress(hLibrary, LFX_DLL_SETLIGHTACTIONCOLOR);
+		setTiming = (LFX2SETTIMING)GetProcAddress(hLibrary, LFX_DLL_SETTIMING);
 		resetFunction = (LFX2RESET)GetProcAddress(hLibrary, LFX_DLL_RESET);
 		updateFunction = (LFX2UPDATE)GetProcAddress(hLibrary, LFX_DLL_UPDATE);
 		lightFunction = (LFX2LIGHT)GetProcAddress(hLibrary, LFX_DLL_LIGHT);
@@ -69,20 +69,14 @@ int main(int argc, char *argv[])
 
 			resetFunction();
 
-			int color = LFX_GREEN;
-			lightFunction(LFX_ALL, LFX_OFF | LFX_FULL_BRIGHTNESS);
-			updateFunction();
-			system("cls");
-			std::cout << "Color: " << std::hex << std::setw(6) << std::setfill('0') << color << std::endl;
-			Sleep(100);
-
 			LFX_COLOR purple = LFX_PURPLE;
 			LFX_COLOR blue = LFX_BLUE;
 			LFX_COLOR teal = LFX_TEAL;
 			LFX_COLOR red = LFX_RED;
 			LFX_COLOR light_green = LFX_LIGHT_GREEN;
 			LFX_COLOR white = LFX_WHITE;
-			
+
+
 			switch (stoi(colourSelection))
 			{
 			case 1:
@@ -130,14 +124,10 @@ int main(int argc, char *argv[])
 				setLightColor(0, 14, &blue);
 				Sleep(100);
 				updateFunction();
-				
-				setLightColor(0, 15,&purple);
+
+				setLightColor(0, 15, &purple);
 				Sleep(100);
 				updateFunction();
-				
-
-				system("cls");
-				std::cout << "Color: " << std::hex << std::setw(6) << std::setfill('0') << color << std::endl;
 				break;
 			case 2:
 				//green teal
@@ -182,14 +172,12 @@ int main(int argc, char *argv[])
 				setLightColor(0, 13, &teal);
 				updateFunction();
 				Sleep(100);
-				setLightColor(0, 14, &teal);	
+				setLightColor(0, 14, &teal);
 				updateFunction();
-				Sleep(100);	
+				Sleep(100);
 				setLightColor(0, 15, &light_green);
 				updateFunction();
 				Sleep(100);
-				system("cls");
-				std::cout << "Color: " << std::hex << std::setw(6) << std::setfill('0') << color << std::endl;
 				break;
 			case 3:
 				//red purple
@@ -234,19 +222,17 @@ int main(int argc, char *argv[])
 				setLightColor(0, 13, &red);
 				updateFunction();
 				Sleep(100);
-				setLightColor(0, 14, &red);	
+				setLightColor(0, 14, &red);
 				updateFunction();
-				Sleep(100);	
+				Sleep(100);
 				setLightColor(0, 15, &purple);
 				updateFunction();
 				Sleep(100);
-				system("cls");
-				std::cout << "Color: " << std::hex << std::setw(6) << std::setfill('0') << color << std::endl;
 				break;
 			case 4:
 				//white
 				colour = "white";
-				
+
 				setLightColor(0, 1, &white);
 				updateFunction();
 				Sleep(100);
@@ -286,75 +272,69 @@ int main(int argc, char *argv[])
 				setLightColor(0, 13, &white);
 				updateFunction();
 				Sleep(100);
-				setLightColor(0, 14, &white);	
+				setLightColor(0, 14, &white);
 				updateFunction();
-				Sleep(100);	
-				setLightColor(0, 15, &white);	
+				Sleep(100);
+				setLightColor(0, 15, &white);
 				updateFunction();
-				Sleep(100);			
+				Sleep(100);
 				updateFunction();
-				system("cls");
-				std::cout << "Color: " << std::hex << std::setw(6) << std::setfill('0') << color << std::endl;
 				break;
 			case 5:
 				//rainbow wave
-				colour = "rainbow wave";
-				setLightColor(0, 1, &red);
+				colour = "Teal/blue";
+				setLightColor(0, 1, &teal);
 				updateFunction();
 				Sleep(100);
-				setLightColor(0, 2, &light_green);
+				setLightColor(0, 2, &teal);
 				updateFunction();
 				Sleep(100);
 				setLightColor(0, 3, &blue);
 				updateFunction();
 				Sleep(100);
-				setLightColor(0, 4, &purple);
+				setLightColor(0, 4, &blue);
 				updateFunction();
 				Sleep(100);
-				setLightColor(0, 5, &purple);
+				setLightColor(0, 5, &teal);
 				updateFunction();
 				Sleep(100);
-				setLightColor(0, 6, &blue);
+				setLightColor(0, 6, &teal);
 				updateFunction();
 				Sleep(100);
-				setLightColor(0, 7, &light_green);
+				setLightColor(0, 7, &blue);
 				updateFunction();
 				Sleep(100);
-				setLightColor(0, 8, &red);
+				setLightColor(0, 8, &blue);
 				updateFunction();
 				Sleep(100);
-				setLightColor(0, 9, &light_green);
+				setLightColor(0, 9, &teal);
 				updateFunction();
 				Sleep(100);
-				setLightColor(0, 10, &blue);
+				setLightColor(0, 10, &teal);
 				updateFunction();
 				Sleep(100);
-				setLightColor(0, 11, &purple);
+				setLightColor(0, 11, &blue);
 				updateFunction();
 				Sleep(100);
-				setLightColor(0, 12, &red);
+				setLightColor(0, 12, &blue);
 				updateFunction();
 				Sleep(100);
-				setLightColor(0, 13, &light_green);
+				setLightColor(0, 13, &teal);
 				updateFunction();
 				Sleep(100);
-				setLightColor(0, 14, &blue);		
+				setLightColor(0, 14, &teal);
 				updateFunction();
 				Sleep(100);
-				setLightColor(0, 15, &purple);	
+				setLightColor(0, 15, &blue);
 				Sleep(100);
 				updateFunction();
-				system("cls");
-				std::cout << "Color: " << std::hex << std::setw(6) << std::setfill('0') << color << std::endl;
 				break;
 			}
+			updateFunction();
 			ofstream myfile;
 			myfile.open("C:/Users/camer/Desktop/test.txt");
 			myfile << "Write colour to file: " + colourSelection + "\n" + colour;
 			myfile.close();
-			cout << colour;
-
-			result = releaseFunction();
 		}
 		else
 		{
