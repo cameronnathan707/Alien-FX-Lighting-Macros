@@ -83,7 +83,7 @@ int main(int argc, char *argv[])
 				colour = "purple/blue";
 				for (int i = 1; i < 15; i++)
 				{
-					if ((i < 5) || (i > 9 && i < 13) || i == 15)
+					if ((i < 5) || (i >= 9 && i < 13) || i == 15)
 					{
 						setLightColor(0, i, &purple);
 						updateFunction();
@@ -102,7 +102,7 @@ int main(int argc, char *argv[])
 				colour = "green/blue";
 				for (int i = 1; i < 15; i++)
 				{
-					if ((i < 5) || (i > 9 && i < 13) || i == 15)
+					if ((i < 5) || (i >= 9 && i < 13) || i == 15)
 					{
 						setLightColor(0, i, &light_green);
 						updateFunction();
@@ -122,7 +122,7 @@ int main(int argc, char *argv[])
 
 				for (int i = 1; i < 15; i++)
 				{
-					if ((i < 5) || (i > 9 && i < 13) || i == 15)
+					if ((i < 5) || (i >= 9 && i < 13) || i == 15)
 					{
 						setLightColor(0, i, &purple);
 						updateFunction();
@@ -152,7 +152,7 @@ int main(int argc, char *argv[])
 				colour = "Teal/blue";
 				for (int i = 1; i < 15; i++)
 				{
-					if ((i < 5) || (i > 9 && i < 13) || i == 15)
+					if ((i < 5) || (i >= 9 && i < 13) || i == 15)
 					{
 						setLightColor(0, i, &teal);
 						updateFunction();
