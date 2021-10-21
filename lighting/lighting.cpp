@@ -76,258 +76,95 @@ int main(int argc, char *argv[])
 			LFX_COLOR light_green = LFX_LIGHT_GREEN;
 			LFX_COLOR white = LFX_WHITE;
 
-
 			switch (stoi(colourSelection))
 			{
 			case 1:
 				//purple blue
 				colour = "purple/blue";
-				setLightColor(0, 1, &purple);
-				Sleep(100);
-				updateFunction();
-				setLightColor(0, 2, &purple);
-				Sleep(100);
-				updateFunction();
-				setLightColor(0, 3, &purple);
-				Sleep(100);
-				updateFunction();
-				setLightColor(0, 4, &purple);
-				Sleep(100);
-				updateFunction();
-				setLightColor(0, 5, &blue);
-				Sleep(100);
-				updateFunction();
-				setLightColor(0, 6, &blue);
-				Sleep(100);
-				updateFunction();
-				setLightColor(0, 7, &blue);
-				Sleep(100);
-				updateFunction();
-				setLightColor(0, 8, &blue);
-				Sleep(100);
-				updateFunction();
-				setLightColor(0, 9, &purple);
-				Sleep(100);
-				updateFunction();
-				setLightColor(0, 10, &purple);
-				Sleep(100);
-				updateFunction();
-				setLightColor(0, 11, &purple);
-				Sleep(100);
-				updateFunction();
-				setLightColor(0, 12, &purple);
-				Sleep(100);
-				updateFunction();
-				setLightColor(0, 13, &blue);
-				Sleep(100);
-				updateFunction();
-				setLightColor(0, 14, &blue);
-				Sleep(100);
-				updateFunction();
-
-				setLightColor(0, 15, &purple);
-				Sleep(100);
-				updateFunction();
+				for (int i = 1; i < 15; i++)
+				{
+					if ((i < 5) || (i > 9 && i < 13) || i == 15)
+					{
+						setLightColor(0, i, &purple);
+						updateFunction();
+						Sleep(100);
+					}
+					else
+					{
+						setLightColor(0, i, &blue);
+						updateFunction();
+						Sleep(100);
+					}
+				}
 				break;
 			case 2:
 				//green teal
 				colour = "green/blue";
-
-				setLightColor(0, 1, &light_green);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 2, &light_green);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 3, &light_green);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 4, &light_green);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 5, &teal);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 6, &teal);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 7, &teal);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 8, &teal);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 9, &light_green);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 10, &light_green);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 11, &light_green);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 12, &light_green);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 13, &teal);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 14, &teal);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 15, &light_green);
-				updateFunction();
-				Sleep(100);
+				for (int i = 1; i < 15; i++)
+				{
+					if ((i < 5) || (i > 9 && i < 13) || i == 15)
+					{
+						setLightColor(0, i, &light_green);
+						updateFunction();
+						Sleep(100);
+					}
+					else
+					{
+						setLightColor(0, i, &teal);
+						updateFunction();
+						Sleep(100);
+					}
+				}
 				break;
 			case 3:
 				//red purple
 				colour = "red/purple";
 
-				setLightColor(0, 1, &purple);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 2, &purple);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 3, &purple);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 4, &purple);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 5, &red);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 6, &red);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 7, &red);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 8, &red);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 9, &purple);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 10, &purple);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 11, &purple);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 12, &purple);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 13, &red);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 14, &red);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 15, &purple);
-				updateFunction();
-				Sleep(100);
+				for (int i = 1; i < 15; i++)
+				{
+					if ((i < 5) || (i > 9 && i < 13) || i == 15)
+					{
+						setLightColor(0, i, &purple);
+						updateFunction();
+						Sleep(100);
+					}
+					else
+					{
+						setLightColor(0, i, &red);
+						updateFunction();
+						Sleep(100);
+					}
+				}
 				break;
 			case 4:
 				//white
 				colour = "white";
 
-				setLightColor(0, 1, &white);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 2, &white);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 3, &white);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 4, &white);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 5, &white);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 6, &white);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 7, &white);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 8, &white);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 9, &white);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 10, &white);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 11, &white);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 12, &white);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 13, &white);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 14, &white);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 15, &white);
-				updateFunction();
-				Sleep(100);
-				updateFunction();
+				for (int i = 1; i < 15; i++)
+				{
+					setLightColor(0, i, &white);
+					updateFunction();
+					Sleep(100);
+				}
 				break;
 			case 5:
 				//rainbow wave
 				colour = "Teal/blue";
-				setLightColor(0, 1, &teal);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 2, &teal);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 3, &blue);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 4, &blue);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 5, &teal);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 6, &teal);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 7, &blue);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 8, &blue);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 9, &teal);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 10, &teal);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 11, &blue);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 12, &blue);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 13, &teal);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 14, &teal);
-				updateFunction();
-				Sleep(100);
-				setLightColor(0, 15, &blue);
-				Sleep(100);
-				updateFunction();
+				for (int i = 1; i < 15; i++)
+				{
+					if ((i < 5) || (i > 9 && i < 13) || i == 15)
+					{
+						setLightColor(0, i, &teal);
+						updateFunction();
+						Sleep(100);
+					}
+					else
+					{
+						setLightColor(0, i, &blue);
+						updateFunction();
+						Sleep(100);
+					}
+				}
 				break;
 			}
 			updateFunction();
