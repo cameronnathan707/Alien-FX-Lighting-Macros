@@ -1,5 +1,5 @@
 //Lighting_Editor
-//This is a code to recive input from autohotkey
+//This is a code to receive input from autohotkey
 
 #include <fstream>
 #include <iostream>
