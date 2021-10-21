@@ -6,5 +6,5 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 
 !1::
-run C:\Users\camer\Documents\GitHub\Alien-FX-Lighting-Macros\lighting\lighting.exe 1 1
+run C:\Users\camer\Documents\GitHub\Alien-FX-Lighting-Macros\lighting\lighting.exe 1
 return
