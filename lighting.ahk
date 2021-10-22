@@ -6,5 +6,17 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 
 !1::
-run, C:\Users\camer\Documents\GitHub\Alien-FX-Lighting-Macros\lighting.exe -1 1
+run, C:\Users\camer\Documents\GitHub\Alien-FX-Lighting-Macros\lighting\lighting.exe -1 1
+return
+!2::
+run, C:\Users\camer\Documents\GitHub\Alien-FX-Lighting-Macros\lighting\lighting.exe -1 2
+return
+!3::
+run, C:\Users\camer\Documents\GitHub\Alien-FX-Lighting-Macros\lighting\lighting.exe -1 3
+return
+!4::
+run, C:\Users\camer\Documents\GitHub\Alien-FX-Lighting-Macros\lighting\lighting.exe -1 4
+return
+!5::
+run, C:\Users\camer\Documents\GitHub\Alien-FX-Lighting-Macros\lighting\lighting.exe -1 5
 return
