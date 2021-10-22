@@ -81,7 +81,7 @@ int main(int argc, char *argv[])
 			case 1:
 				//purple blue
 				colour = "purple/blue";
-				for (int i = 1; i < 15; i++)
+				for (int i = 1; i <= 15; i++)
 				{
 					if ((i < 5) || (i >= 9 && i < 13) || i == 15)
 					{
@@ -100,7 +100,7 @@ int main(int argc, char *argv[])
 			case 2:
 				//green teal
 				colour = "green/blue";
-				for (int i = 1; i < 15; i++)
+				for (int i = 1; i <= 15; i++)
 				{
 					if ((i < 5) || (i >= 9 && i < 13) || i == 15)
 					{
@@ -120,7 +120,7 @@ int main(int argc, char *argv[])
 				//red purple
 				colour = "red/purple";
 
-				for (int i = 1; i < 15; i++)
+				for (int i = 1; i <= 15; i++)
 				{
 					if ((i < 5) || (i >= 9 && i < 13) || i == 15)
 					{
@@ -140,7 +140,7 @@ int main(int argc, char *argv[])
 				//white
 				colour = "white";
 
-				for (int i = 1; i < 15; i++)
+				for (int i = 1; i <= 15; i++)
 				{
 					setLightColor(0, i, &white);
 					updateFunction();
@@ -150,7 +150,7 @@ int main(int argc, char *argv[])
 			case 5:
 				//rainbow wave
 				colour = "Teal/blue";
-				for (int i = 1; i < 15; i++)
+				for (int i = 1; i <= 15; i++)
 				{
 					if ((i < 5) || (i >= 9 && i < 13) || i == 15)
 					{
